@@ -1,0 +1,93 @@
+$core: #D3D3CF;
+$purple: #330033;
+$grey: #8B9389;
+$tan: #A8A28D;
+
+input {
+  margin: 15px;
+}
+
+img {
+  transition: 1s;
+}
+
+body {
+  color: green;
+}
+
+.float-center {
+  float: center;
+}
+
+#form {
+  padding: 20px;
+  width: 250px;
+  height: 250px;
+}
+
+.donut-text {
+  color: white;
+}
+
+#plug {
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  margin-left: 20px;
+  bottom: 0;
+}
+
+#title {
+  color: white;
+  font-weight: bold;
+  margin: 0;
+}
+
+#gradient {
+  background: -webkit-linear-gradient(lightslategray, transparent); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(lightslategray, transparent); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(lightslategray, transparent); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(lightslategray, transparent); /* Standard syntax */
+}
+
+#blurb {
+  font-weight: bold;
+  font-size: 25px;
+  color: white;
+}
+
+svg {
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
