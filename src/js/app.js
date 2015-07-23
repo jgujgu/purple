@@ -49,14 +49,14 @@ var menu = function() {
 
 var homeBody = function() {
     return [
-        m("h1", "P[u]rpl[e]. Stately Web Design."),
-        m("div", {class: "buttons"}, [
-            m("div", {id: "prev", class:"disc-button"}, "<"),
-            m("div", {id: "next", class:"disc-button"}, ">"),
-        ]),
-        m("div", {id: "hexaflip-demo4", class: "demo"}),
-        //m("script", {src: "js/hexaflip.js"}),
-        //m("script", {src: "js/myhexa.js"}),
+        m("h1", {id: "title"}, "P[u]rpl[e]. Stately Web Design."),
+        m("div", {id: "hexa-div"}, [
+            m("div", {id: "hexaflip", class: "hexa"}),
+            m("div", {id: "btn-div"}, [
+                m("button", {id: "prev", class:"btn btn-2 btn-2j"}, "<"),
+                m("button", {id: "next", class:"btn btn-2 btn-2j"}, ">"),
+            ]),
+        ])
     ];
 };
 

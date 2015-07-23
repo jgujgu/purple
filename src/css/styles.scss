@@ -2,9 +2,38 @@ $core: #D3D3CF;
 $purple: #330033;
 $grey: #8B9389;
 $tan: #A8A28D;
+$light-purple: #810081;
+$med-purple: #593358;
 
 input {
   margin: 15px;
+}
+
+.hexa {
+  margin: 0 auto;
+  -webkit-filter: drop-shadow(30px 30px 23px rgba(0,0,0,0.3));
+  -moz-filter: drop-shadow(30px 30px 23px rgba(0,0,0,0.3));
+  filter: drop-shadow(30px 30px 23px rgba(0,0,0,0.3));
+}
+
+#prev {
+  float: left;
+}
+
+#next {
+  float: right;
+}
+
+#hexa-div {
+  margin-top: 150px;
+}
+
+#btn-div {
+  margin: 0 auto;
+  margin-top: -12%;
+  width: 900px;
+  background-color: green;
+  z-index: 5;
 }
 
 img {
@@ -12,7 +41,85 @@ img {
 }
 
 body {
-  color: green;
+  font-family: 'Roboto', sans-serif;
+  color: $med-purple;
+}
+
+#title {
+  font-color: $med-purple;
+}
+
+.btn {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 25px 80px;
+	display: inline-block;
+	margin: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+/* Pseudo elements for icons */
+.btn:before,
+.icon-heart:after,
+.icon-star:after,
+.icon-plus:after,
+.icon-file:before {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	position: relative;
+	-webkit-font-smoothing: antialiased;
+}
+
+.btn-2 {
+	background: $light-purple;
+	color: $core;
+	box-shadow: 0 6px $purple;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+}
+
+/* Button 2j */
+.btn-2j {
+	border-radius: 50%;
+	width: 90px;
+	height: 90px;
+	padding: 0;
+}
+
+.btn-2j:hover {
+	box-shadow: 0 8px $purple;
+	top: -2px;
+}
+
+.btn-2j:active {
+	box-shadow: 0 0 $purple;
+	top: 6px;
 }
 
 .float-center {
@@ -35,12 +142,6 @@ body {
   position: absolute;
   margin-left: 20px;
   bottom: 0;
-}
-
-#title {
-  color: white;
-  font-weight: bold;
-  margin: 0;
 }
 
 #gradient {

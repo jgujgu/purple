@@ -1,23 +1,25 @@
-var hexaDemo4,
+var hexa,
 images = [
-    './img/1.jpg',
-    './img/2.jpg',
-    './img/3.jpg',
-    './img/4.jpg',
-    './img/5.jpg',
-    './img/6.jpg'
+    './img/commitcat.gif',
+    './img/diffepedia.gif',
+    './img/go.gif',
+    './img/pinyintype.gif',
+    './img/clamorous.gif',
 ];
 document.addEventListener('DOMContentLoaded', function(){
-    hexaDemo4 = new HexaFlip(document.getElementById('hexaflip-demo4'), {set: images},{
+    hexa = new HexaFlip(document.getElementById('hexaflip'), {set: images},{
         size: 500
     });
+
+    var i = 0;
+    setInterval(function() { i++; if (i <= images.length) { hexa.flip(); } }, 500);
+
     document.getElementById('prev').addEventListener('click', function(){
-        hexaDemo4.flipBack();
+        hexa.flipBack();
     }, false);
 
     document.getElementById('next').addEventListener('click', function(){
-        hexaDemo4.flip();
+        hexa.flip();
     }, false);
-
 }, false);
 
