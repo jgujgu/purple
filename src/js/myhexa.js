@@ -8,7 +8,7 @@ images = [
 ];
 document.addEventListener('DOMContentLoaded', function(){
     hexa = new HexaFlip(document.getElementById('hexaflip'), {set: images},{
-        size: 500
+        size: 400
     });
 
     var i = 0;

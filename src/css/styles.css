@@ -6,13 +6,14 @@ input {
   color: #C5B358; }
 
 .nl-ti-example {
-  color: #8B9389 !important; }
+  color: #C5B358 !important; }
 
-#checkout:hover, #checkout:focus {
+#checkout:hover, #checkout:focus, #about:hover, #about:focus, #close:hover, #close:focus {
   transition: 1s;
   color: #C5B358; }
 
-#checkout {
+#checkout, #about, #close {
+  transition: 1s;
   color: #D3D3CF;
   background-color: Transparent;
   background-repeat: no-repeat;
@@ -23,7 +24,7 @@ input {
 
 #slogan {
   text-align: center;
-  font-size: 60px; }
+  font-size: 50px; }
 
 #year {
   color: #8B9389; }
@@ -42,19 +43,20 @@ input {
 .center {
   margin: 0 auto; }
 
-#react, #rails, #vim, #pg, #d3 {
-  margin: 30px;
-  height: 150px;
-  z-index: 5; }
+#react, #rails, #vim, #pg, #d3, #ai {
+  margin: 25px;
+  height: 100px;
+  z-index: 5;
+  float: center; }
 
 #ang, #mongo, #mithril, #node {
-  margin: 30px;
-  width: 350px;
+  float: center;
+  margin: 25px;
+  width: 300px;
   z-index: 5; }
 
 #logo-div {
-  width: 900px;
-  margin-top: 30px; }
+  width: 888px; }
 
 .hexa {
   margin: 0 auto;
@@ -69,11 +71,11 @@ input {
   float: right; }
 
 #hexa-div {
-  margin-top: 80px; }
+  margin-top: 40px; }
 
 #btn-div {
   margin: 0 auto;
-  margin-top: -13%;
+  margin-top: -18%;
   width: 900px;
   background-color: green;
   z-index: 5; }

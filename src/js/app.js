@@ -9,6 +9,8 @@ var purple =[
     m("span", {class: "gold-color"}, "]"),
 ];
 
+var polyfilter_scriptpath = '/js/';
+
 var layout = function(nav, body) {
     return m("div", [
         m("div", nav),
@@ -42,7 +44,7 @@ var menu = function() {
                     ]),
                 ]),
                 m("li", [
-                    m("a", {href: "/about", config: m.route}, [
+                    m("button", {id: "about", "data-modal": "modal-13", class: "md-trigger"}, [
                         m("span", {class: "mega-octicon octicon-person"}),
                     ]),
                 ]),
@@ -58,6 +60,26 @@ var menu = function() {
                 ]),
             ]),
         ]),
+        m(".md-modal.md-effect-13[id='modal-13']", [
+            m(".md-content", [
+                m("h3", [
+                    "About ",
+                    purple,
+                ]),
+                m("div", [
+                    m("p", [
+                        purple,
+                        " was founded on the principle that royal refinement and magnificence could be emulated on the platform for everyone. We are a designer-developer team that emphasizes a seamless user experience and awe-inspiring artistry.",
+                        " From the database to the drawing-panel, we are experts in the entire creative process.",
+                        " Contact us today for a quote on your next, beautiful project.",
+                    ]),
+                    m("button.md-close", {id: "close"}, [
+                        m("span", {class: "mega-octicon octicon-x"}),
+                    ])
+                ])
+            ])
+        ]),
+        m(".md-overlay"),
         m("script", {src: "js/classie.js"}),
         m("script", {src: "js/borderMenu.js"}),
         m("script", {src: "js/TweenLite.min.js"}),
@@ -65,6 +87,10 @@ var menu = function() {
         m("script", {src: "js/gold.js"}),
         m("script", {src: "https://checkout.stripe.com/checkout.js"}),
         m("script", {src: "js/stripe.js"}),
+        m("script", {src: "js/classie.js"}),
+        m("script", {src: "js/modalEffects.js"}),
+        m("script", {src: "js/cssParser.js"}),
+        m("script", {src: "js/css-filters-polyfill.js"}),
     ];
 };
 
@@ -89,11 +115,12 @@ var skillsBody = function() {
         m("h1", {id: "tech", class: "center"}, "Our Acumen"),
         m("div", {id: "logo-div", class: "center"}, [
             m("img", {id: "ang", src: "img/angular.png"}),
-            m("img", {id: "mithril", src: "img/mithril.png"}),
-            m("img", {id: "react", src: "img/react.png"}),
             m("img", {id: "node", src: "img/node.png"}),
-            //m("img", {id: "vim", src: "img/vim.png"}),
+            m("img", {id: "mithril", src: "img/mithril.png"}),
+            m("img", {id: "ai", src: "img/ai.png"}),
             m("img", {id: "d3", src: "img/d3.svg"}),
+            m("img", {id: "react", src: "img/react.png"}),
+            //m("img", {id: "vim", src: "img/vim.png"}),
             m("img", {id: "mongo", src: "img/mongodb.png"}),
             m("img", {id: "rails", src: "img/rails.png"}),
             m("img", {id: "pg", src: "img/pg.png"}),
@@ -124,6 +151,7 @@ var contactBody = function() {
             m("select", [
                 m("option[selected=''][value='1']", "JavaScript"),
                 m("option[value='2']", "Ruby"),
+                m("option[value='2']", "design"),
                 m("option[value='3']", "data viz")
             ]),
             "\nproject.\n",
@@ -144,7 +172,7 @@ var contactBody = function() {
             ]),
             m("br"),
             " for ",
-            m("input[data-subline='Examples: <em>software enthusiasts</em> or <em>dog lovers</em>'][placeholder='collectors of royal crowns'][type='text'][value='']"),
+            m("input[data-subline='Examples: <em>court jesters</em> or <em>handmaidens</em>'][placeholder='the modern royalty'][type='text'][value='']"),
             ".",
             m("br"),
             m("input[data-subline='Examples: <em>king_george@castle.com</em> or <em>emperor_qianlong@forbiddenpalace.com</em>'][placeholder='you@email.com'][type='text'][value='']"),
@@ -194,12 +222,6 @@ var viz = {
     }
 };
 
-var about = {
-    view: function() {
-        return mixinLayout(layout, menu, aboutBody);
-    }
-};
-
 var contact = {
     view: function() {
         return mixinLayout(layout, menu, contactBody);
@@ -212,6 +234,5 @@ m.route(document.body, "/", {
     "/": root,
     "/skills": skills,
     "/viz": viz,
-    "/about": about,
     "/contact": contact,
 });

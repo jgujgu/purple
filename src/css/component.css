@@ -8,7 +8,7 @@
 .nl-form {
   width: 100%;
   margin: 0.3em auto 0 auto;
-  font-size: 4em;
+  font-size: 2em;
   line-height: 1.5; }
 
 .nl-form ul {
@@ -140,7 +140,7 @@
 .nl-field-go:before {
   content: "\e001";
   font-size: 75%;
-  color: #D3D3CF;
+  color: #C5B358;
   width: 100%;
   line-height: 2.5;
   display: block; }

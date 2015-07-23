@@ -1,38 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 	<head>
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/component2.css" />
 	</head>
-	<body class="nl-blurred">
+	<body>
+		<!-- All modals added here for the demo. You would of course just have one, dynamically created -->
 			<!-- Top Navigation -->
-				<form id="nl-form" class="nl-form">
-          I would like to hire P[u]rpl[e]
-          <br />for my next
-          <select>
-            <option value="1" selected>JavaScript</option>
-            <option value="2">Ruby</option>
-            <option value="3">data viz</option>
-					</select>
-          project.
-          <br />It will be an
-          <select>
-            <option value="1" selected>interactive</option>
-            <option value="2">static</option>
-					</select>
-					website
-          <br />with many
-					<select>
-            <option value="1" selected>items</option>
-            <option value="2">users</option>
-            <option value="3">pages</option>
-            <option value="4">none of these choices</option>
-					</select>
-          <br /> for <input type="text" value="" placeholder="collectors of crowns" data-subline="Examples: <em>software enthusiasts</em> or <em>dog lovers</em>"/>
-					<div class="nl-submit-wrap">
-            <button class="nl-submit" type="submit">Design it.</button>
-					</div>
-					<div class="nl-overlay"></div>
-				</form>
-		<script src="js/nlform.js"></script>
+					<button class="md-trigger" data-modal="modal-13">3D Slit</button>
+		<div class="md-overlay"></div><!-- the overlay element -->
+
+		<!-- classie.js by @desandro: https://github.com/desandro/classie -->
+		<script src="js/classie.js"></script>
+		<script src="js/modalEffects.js"></script>
+
+		<!-- for the blur effect -->
+		<!-- by @derSchepp https://github.com/Schepp/CSS-Filters-Polyfill -->
+		<script>
+			// this is important for IEs
+			var polyfilter_scriptpath = '/js/';
+		</script>
+		<script src="js/cssParser.js"></script>
+		<script src="js/css-filters-polyfill.js"></script>
 	</body>
 </html>
