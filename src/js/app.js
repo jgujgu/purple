@@ -1,3 +1,14 @@
+var purple =[
+    "P",
+    m("span", {class: "gold-color"}, "["),
+    "u",
+    m("span", {class: "gold-color"}, "]"),
+    "rpl",
+    m("span", {class: "gold-color"}, "["),
+    "e",
+    m("span", {class: "gold-color"}, "]"),
+];
+
 var layout = function(nav, body) {
     return m("div", [
         m("div", nav),
@@ -9,7 +20,7 @@ var menu = function() {
     return [
         m("div", {id: "logo"}, [
             m("canvas", {id: "gold"}),
-            m("h1", {id: "title"}, "P[u]rpl[e]"),
+            m("h1", {id: "title"}, purple),
             m("h3", {id: "blurb"}, "Regal Web Design")
         ]),
         m("nav", {id: "bt-menu", class: "bt-menu"},[
@@ -36,7 +47,7 @@ var menu = function() {
                     ]),
                 ]),
                 m("li", [
-                    m("a", {href: "/about", config: m.route}, [
+                    m("button", {id: "checkout"}, [
                         m("span", {class: "mega-octicon octicon-credit-card"}),
                     ]),
                 ]),
@@ -52,11 +63,17 @@ var menu = function() {
         m("script", {src: "js/TweenLite.min.js"}),
         m("script", {src: "js/EasePack.min.js"}),
         m("script", {src: "js/gold.js"}),
+        m("script", {src: "https://checkout.stripe.com/checkout.js"}),
+        m("script", {src: "js/stripe.js"}),
     ];
 };
 
 var homeBody = function() {
     return [
+        m("h1", {id: "slogan"}, [
+            m("span", {id: "year"}, "It's 2015. "),
+            m("span", {id: "look"}, "Look like it."),
+        ]),
         m("div", {id: "hexa-div"}, [
             m("div", {id: "hexaflip", class: "hexa"}),
             m("div", {id: "btn-div"}, [
@@ -75,7 +92,8 @@ var skillsBody = function() {
             m("img", {id: "mithril", src: "img/mithril.png"}),
             m("img", {id: "react", src: "img/react.png"}),
             m("img", {id: "node", src: "img/node.png"}),
-            m("img", {id: "vim", src: "img/vim.png"}),
+            //m("img", {id: "vim", src: "img/vim.png"}),
+            m("img", {id: "d3", src: "img/d3.svg"}),
             m("img", {id: "mongo", src: "img/mongodb.png"}),
             m("img", {id: "rails", src: "img/rails.png"}),
             m("img", {id: "pg", src: "img/pg.png"}),
@@ -91,13 +109,51 @@ var vizBody = function() {
 
 var aboutBody = function() {
     return [
-        m("h1", "About")
+        m("div", {id: "about"}, [
+        ])
     ];
 };
 
 var contactBody = function() {
     return [
-        m("h1", "Contact")
+        m("form.nl-form[id='nl-form']", [
+            "I would like to hire ",
+            purple,
+            m("br"),
+            "for my next\n",
+            m("select", [
+                m("option[selected=''][value='1']", "JavaScript"),
+                m("option[value='2']", "Ruby"),
+                m("option[value='3']", "data viz")
+            ]),
+            "\nproject.\n",
+            m("br"),
+            "It will be an\n",
+            m("select", [
+                m("option[selected=''][value='1']", "interactive"),
+                m("option[value='2']", "static")
+            ]),
+            "\nwebsite\n",
+            m("br"),
+            "with many\n",
+            m("select", [
+                m("option[selected=''][value='1']", "items"),
+                m("option[value='2']", "users"),
+                m("option[value='3']", "pages"),
+                m("option[value='4']", "none of these choices")
+            ]),
+            m("br"),
+            " for ",
+            m("input[data-subline='Examples: <em>software enthusiasts</em> or <em>dog lovers</em>'][placeholder='collectors of royal crowns'][type='text'][value='']"),
+            ".",
+            m("br"),
+            m("input[data-subline='Examples: <em>king_george@castle.com</em> or <em>emperor_qianlong@forbiddenpalace.com</em>'][placeholder='you@email.com'][type='text'][value='']"),
+            m(".nl-submit-wrap", [
+                m("button.nl-submit[type='submit']", "Decree it.")
+            ]),
+            m(".nl-overlay")
+        ]),
+        m("script", {src: "js/nlform.js"}),
     ];
 };
 
@@ -150,12 +206,6 @@ var contact = {
     }
 };
 
-var login = {
-    view: function() {
-        return m("div", "login");
-    }
-};
-
 m.route.mode = "hash";
 
 m.route(document.body, "/", {
@@ -164,5 +214,4 @@ m.route(document.body, "/", {
     "/viz": viz,
     "/about": about,
     "/contact": contact,
-    "/dashboard/:userID": dashboard,
 });

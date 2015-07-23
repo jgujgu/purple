@@ -1,22 +1,60 @@
 input {
   margin: 15px; }
 
-#ang, #mongo, #mithril, #node {
-  margin: 10px;
-  width: 350px; }
+.gold-color {
+  transition: 1s;
+  color: #C5B358; }
+
+.nl-ti-example {
+  color: #8B9389 !important; }
+
+#checkout:hover, #checkout:focus {
+  transition: 1s;
+  color: #C5B358; }
+
+#checkout {
+  color: #D3D3CF;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none; }
+
+#slogan {
+  text-align: center;
+  font-size: 60px; }
+
+#year {
+  color: #8B9389; }
+
+#look {
+  color: #810081; }
+
+#nl-form {
+  margin: 0 auto;
+  text-align: center; }
 
 #gold {
+  z-index: 0;
   position: fixed; }
 
 .center {
   margin: 0 auto; }
 
-#react, #rails, #vim, #pg {
-  margin: 10px;
-  height: 150px; }
+#react, #rails, #vim, #pg, #d3 {
+  margin: 30px;
+  height: 150px;
+  z-index: 5; }
+
+#ang, #mongo, #mithril, #node {
+  margin: 30px;
+  width: 350px;
+  z-index: 5; }
 
 #logo-div {
-  width: 800px; }
+  width: 900px;
+  margin-top: 30px; }
 
 .hexa {
   margin: 0 auto;
@@ -48,6 +86,7 @@ body {
   color: #593358;
   position: fixed;
   overflow-y: scroll;
+  overflow-y: hidden;
   width: 100%; }
 
 #title {
@@ -111,9 +150,9 @@ body {
   -webkit-font-smoothing: antialiased; }
 
 .btn-2 {
-  background: #810081;
+  background: #C5B358;
   color: #D3D3CF;
-  box-shadow: 0 6px #330033;
+  box-shadow: 0 6px #6e6226;
   -webkit-transition: none;
   -moz-transition: none;
   transition: none; }
@@ -126,11 +165,11 @@ body {
   padding: 0; }
 
 .btn-2j:hover {
-  box-shadow: 0 8px #330033;
+  box-shadow: 0 8px #6e6226;
   top: -2px; }
 
 .btn-2j:active {
-  box-shadow: 0 0 #330033;
+  box-shadow: 0 0 #6e6226;
   top: 6px; }
 
 .float-center {

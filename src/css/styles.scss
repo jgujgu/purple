@@ -4,17 +4,57 @@ $grey: #8B9389;
 $tan: #A8A28D;
 $light-purple: #810081;
 $med-purple: #593358;
+$gold: #C5B358;
+$dark-gold: #6e6226;
 
 input {
   margin: 15px;
 }
 
-#ang,#mongo,#mithril,#node {
-  margin: 10px;
-  width: 350px;
+.gold-color {
+  transition: 1s;
+  color: $gold;
+}
+
+.nl-ti-example {
+  color: $grey !important;
+}
+
+#checkout:hover, #checkout:focus {
+  transition: 1s;
+  color: $gold
+}
+
+#checkout {
+  color: $core;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+}
+
+#slogan {
+  text-align: center;
+  font-size: 60px;
+}
+
+#year {
+  color: $grey;
+}
+
+#look {
+  color: $light-purple;
+}
+
+#nl-form {
+  margin: 0 auto;
+  text-align: center;
 }
 
 #gold {
+  z-index: 0;
   position: fixed;
 }
 
@@ -22,13 +62,21 @@ input {
   margin: 0 auto;
 }
 
-#react, #rails, #vim, #pg {
-  margin: 10px;
-  height: 150px
+#react, #rails, #vim, #pg, #d3 {
+  margin: 30px;
+  height: 150px;
+  z-index: 5;
+}
+
+#ang,#mongo,#mithril,#node {
+  margin: 30px;
+  width: 350px;
+  z-index: 5;
 }
 
 #logo-div {
-  width: 800px;
+  width: 900px;
+  margin-top: 30px;
 }
 
 .hexa {
@@ -67,6 +115,7 @@ body {
   color: $med-purple;
   position: fixed;
   overflow-y: scroll;
+  overflow-y: hidden;
   width: 100%;
 }
 
@@ -138,9 +187,9 @@ body {
 }
 
 .btn-2 {
-  background: $light-purple;
+  background: $gold;
   color: $core;
-  box-shadow: 0 6px $purple;
+  box-shadow: 0 6px $dark-gold;
   -webkit-transition: none;
   -moz-transition: none;
   transition: none;
@@ -155,12 +204,12 @@ body {
 }
 
 .btn-2j:hover {
-  box-shadow: 0 8px $purple;
+  box-shadow: 0 8px $dark-gold;
   top: -2px;
 }
 
 .btn-2j:active {
-  box-shadow: 0 0 $purple;
+  box-shadow: 0 0 $dark-gold;
   top: 6px;
 }
 

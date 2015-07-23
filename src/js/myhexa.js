@@ -2,7 +2,7 @@ var hexa,
 images = [
     './img/commitcat.gif',
     './img/diffepedia.gif',
-    './img/go.gif',
+    //'./img/go.gif',
     './img/pinyintype.gif',
     './img/clamorous.gif',
 ];
