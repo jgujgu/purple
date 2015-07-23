@@ -8,6 +8,7 @@ var layout = function(nav, body) {
 var menu = function() {
     return [
         m("div", {id: "logo"}, [
+            m("canvas", {id: "gold"}),
             m("h1", {id: "title"}, "P[u]rpl[e]"),
             m("h3", {id: "blurb"}, "Regal Web Design")
         ]),
@@ -36,18 +37,21 @@ var menu = function() {
                 ]),
                 m("li", [
                     m("a", {href: "/about", config: m.route}, [
-                        m("span", {class: "mega-octicon octicon-octoface"}),
+                        m("span", {class: "mega-octicon octicon-credit-card"}),
                     ]),
                 ]),
                 m("li", [
                     m("a", {href: "/contact", config: m.route}, [
-                        m("span", {class: "mega-octicon octicon-thumbsup"}),
+                        m("span", {class: "mega-octicon octicon-mail"}),
                     ]),
                 ]),
             ]),
         ]),
         m("script", {src: "js/classie.js"}),
         m("script", {src: "js/borderMenu.js"}),
+        m("script", {src: "js/TweenLite.min.js"}),
+        m("script", {src: "js/EasePack.min.js"}),
+        m("script", {src: "js/gold.js"}),
     ];
 };
 
@@ -65,15 +69,15 @@ var homeBody = function() {
 
 var skillsBody = function() {
     return [
-        m("h1", {id: "tech", class: "center-block"}, "Technologies we use"),
-        m("div", {id: "logo-div", class: "center-block"}, [
+        m("h1", {id: "tech", class: "center"}, "Our Acumen"),
+        m("div", {id: "logo-div", class: "center"}, [
             m("img", {id: "ang", src: "img/angular.png"}),
-            m("img", {id: "node", src: "img/node.png"}),
-            m("img", {id: "mongo", src: "img/mongodb.png"}),
             m("img", {id: "mithril", src: "img/mithril.png"}),
             m("img", {id: "react", src: "img/react.png"}),
-            m("img", {id: "rails", src: "img/rails.png"}),
+            m("img", {id: "node", src: "img/node.png"}),
             m("img", {id: "vim", src: "img/vim.png"}),
+            m("img", {id: "mongo", src: "img/mongodb.png"}),
+            m("img", {id: "rails", src: "img/rails.png"}),
             m("img", {id: "pg", src: "img/pg.png"}),
         ])
     ];
