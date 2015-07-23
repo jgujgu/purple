@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 
     var i = 0;
-    setInterval(function() { i++; if (i <= images.length) { hexa.flip(); } }, 500);
+    setInterval(function() { i++; if (i <= images.length) { hexa.flipBack(); } }, 500);
 
     document.getElementById('prev').addEventListener('click', function(){
         hexa.flipBack();

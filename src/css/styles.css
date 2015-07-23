@@ -1,6 +1,17 @@
 input {
   margin: 15px; }
 
+#ang, #mongo, #mithril, #node {
+  margin: 10px;
+  width: 350px; }
+
+#react, #rails, #vim, #pg {
+  margin: 10px;
+  height: 150px; }
+
+#logo-div {
+  width: 800px; }
+
 .hexa {
   margin: 0 auto;
   -webkit-filter: drop-shadow(30px 30px 23px rgba(0, 0, 0, 0.3));
@@ -31,7 +42,20 @@ body {
   color: #593358; }
 
 #title {
-  font-color: #593358; }
+  color: #593358;
+  font-size: 50px; }
+
+#blurb {
+  color: #8B9389 !important;
+  margin-top: -30px; }
+
+#tech {
+  color: #8B9389 !important;
+  margin: 0 auto; }
+
+#logo {
+  margin-top: 50px;
+  margin-left: 50px; }
 
 .btn {
   border: none;

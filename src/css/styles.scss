@@ -9,6 +9,20 @@ input {
   margin: 15px;
 }
 
+#ang,#mongo,#mithril,#node {
+  margin: 10px;
+  width: 350px;
+}
+
+#react, #rails, #vim, #pg {
+  margin: 10px;
+  height: 150px
+}
+
+#logo-div {
+  width: 800px;
+}
+
 .hexa {
   margin: 0 auto;
   -webkit-filter: drop-shadow(30px 30px 23px rgba(0,0,0,0.3));
@@ -46,7 +60,23 @@ body {
 }
 
 #title {
-  font-color: $med-purple;
+  color: $med-purple;
+  font-size: 50px;
+}
+
+#blurb {
+  color: $grey !important;
+  margin-top: -30px;
+}
+
+#tech {
+  color: $grey !important;
+  margin: 0 auto;
+}
+
+#logo {
+  margin-top: 50px;
+  margin-left: 50px;
 }
 
 .btn {
