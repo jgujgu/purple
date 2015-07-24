@@ -74,7 +74,7 @@ var menu = function() {
                         " Contact us today for a quote on your next, beautiful project.",
                     ]),
                     m("button.md-close", {id: "close"}, [
-                        m("span", {class: "mega-octicon octicon-x"}),
+                        m("span", {class: "mega-octicon octicon-check"}),
                     ])
                 ])
             ])

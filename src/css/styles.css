@@ -30,7 +30,7 @@ input {
   color: #8B9389; }
 
 #look {
-  color: #810081; }
+  color: #593358; }
 
 #nl-form {
   margin: 0 auto;
@@ -75,7 +75,7 @@ input {
 
 #btn-div {
   margin: 0 auto;
-  margin-top: -18%;
+  margin-top: -200px;
   width: 900px;
   background-color: green;
   z-index: 5; }
