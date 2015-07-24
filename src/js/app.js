@@ -34,7 +34,7 @@ var menu = function() {
                     ]),
                 ]),
                 m("li", [
-                    m("a", {href: "/skills", config: m.route}, [
+                    m("a", {href: "/expertise", config: m.route}, [
                         m("span", {class: "mega-octicon octicon-keyboard"}),
                     ]),
                 ]),
@@ -110,7 +110,7 @@ var homeBody = function() {
     ];
 };
 
-var skillsBody = function() {
+var expertiseBody = function() {
     return [
         m("h1", {id: "tech", class: "center"}, "Our Acumen"),
         m("div", {id: "logo-div", class: "center"}, [
@@ -210,9 +210,9 @@ var root = {
     }
 };
 
-var skills = {
+var expertise = {
     view: function() {
-        return mixinLayout(layout, menu, skillsBody);
+        return mixinLayout(layout, menu, expertiseBody);
     }
 };
 
@@ -232,7 +232,7 @@ m.route.mode = "hash";
 
 m.route(document.body, "/", {
     "/": root,
-    "/skills": skills,
+    "/expertise": expertise,
     "/viz": viz,
     "/contact": contact,
 });

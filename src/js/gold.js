@@ -1,6 +1,7 @@
 (function() {
 
     var width, height, docBody, canvas, ctx, points, target, animateHeader = true;
+    var margin = 175;
 
     // Main
     initHeader();
@@ -8,8 +9,8 @@
     addListeners();
 
     function initHeader() {
-        width = window.innerWidth;
-        height = window.innerHeight;
+        width = window.innerWidth - margin;
+        height = window.innerHeight - margin;
         target = {x: width/2, y: height/2};
 
         docBody = document.body;

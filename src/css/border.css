@@ -24,14 +24,16 @@ body {
   background-color: transparent;
   -webkit-backface-visibility: hidden;
   -webkit-transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
-  transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s; }
+  transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
+  z-index: 5; }
 
 .bt-menu.bt-menu-open {
   height: 100%;
   border-width: 30px 30px 90px 30px;
   background-color: rgba(0, 0, 0, 0.3);
   -webkit-transition: border-width 0.3s, background-color 0.3s;
-  transition: border-width 0.3s, background-color 0.3s; }
+  transition: border-width 0.3s, background-color 0.3s;
+  z-index: 5; }
 
 .bt-overlay {
   position: absolute;

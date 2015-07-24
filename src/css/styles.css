@@ -1,6 +1,12 @@
 input {
   margin: 15px; }
 
+#gold {
+  transition: 1s;
+  border: 8px solid #C5B358;
+  border-radius: 4px;
+  z-index: 0; }
+
 .gold-color {
   transition: 1s;
   color: #C5B358; }
@@ -92,12 +98,22 @@ body {
   width: 100%; }
 
 #title {
+  border-left: 8px solid #D3D3CF;
+  border-top: 8px solid #D3D3CF;
+  width: 228px;
   color: #593358;
-  font-size: 50px; }
+  font-size: 50px;
+  position: relative;
+  z-index: 1; }
 
 #blurb {
   color: #8B9389 !important;
-  margin-top: -30px; }
+  border-left: 8px solid #D3D3CF;
+  width: 228px;
+  height: 48px;
+  margin-top: -35px;
+  position: relative;
+  z-index: 2; }
 
 #tech {
   font-size: 50px;
@@ -105,8 +121,8 @@ body {
   text-align: center; }
 
 #logo {
-  margin-top: 50px;
-  margin-left: 50px; }
+  margin-top: 40px;
+  margin-left: 70px; }
 
 .btn {
   border: none;

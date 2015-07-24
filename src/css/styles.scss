@@ -12,6 +12,13 @@ input {
   margin: 15px;
 }
 
+#gold {
+  transition: 1s;
+  border: 8px solid $gold;
+  border-radius: 4px;
+  z-index: 0;
+}
+
 .gold-color {
   transition: 1s;
   color: $gold;
@@ -123,13 +130,23 @@ body {
 }
 
 #title {
+  border-left: 8px solid $core;
+  border-top: 8px solid $core;
+  width: 228px;
   color: $med-purple;
   font-size: 50px;
+  position: relative;
+  z-index: 1;
 }
 
 #blurb {
   color: $grey !important;
-  margin-top: -30px;
+  border-left: 8px solid $core;
+  width: 228px;
+  height: 48px;
+  margin-top: -35px;
+  position: relative;
+  z-index: 2;
 }
 
 #tech {
@@ -139,8 +156,8 @@ body {
 }
 
 #logo {
-  margin-top: 50px;
-  margin-left: 50px;
+  margin-top: 40px;
+  margin-left: 70px;
 }
 
 .btn {
